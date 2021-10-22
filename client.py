@@ -23,4 +23,8 @@ if __name__ == "__main__":
         type=socket.SOCK_STREAM,
     )
     sock.connect(ADDR)
-    send("hello world!", sock)
+
+    while (in_str := input("Enter message (type 'exit' to exit): ")) != "exit":
+        send(in_str, sock)
+
+    send(DISCONNECT_MESSAGE, sock)
