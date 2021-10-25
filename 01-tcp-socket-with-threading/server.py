@@ -47,5 +47,5 @@ def main():
         print(f"[Active Connections] {threading.active_count() - 1}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
